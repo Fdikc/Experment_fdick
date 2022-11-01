@@ -1,7 +1,7 @@
 # Experment_fdick
 ## 图书管理系统
 
-#### 基于Spring+Spring MVC(Maven方式构建)
+#### 基于mybatis+servlet(Maven方式构建)
 
 [![Build Status](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202211012228722.svg)](https://github.com/Fdikc/Experment_fdick)
 [![Fdick.pm](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202211012227736.svg)](![fdick](https://github.com/Fdikc/Experment_fdick))
