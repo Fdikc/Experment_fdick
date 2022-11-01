@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+
+<mapper namespace="edu.bzu.fdick.mapper.BookMapper">
+
+    <select id="selectAllBook"  resultType="book">
+        select * from bookinfo
+    </select>
+    <select id="searchAllByAuthor" resultType="book">
+        select *
+        from bookinfo
+        where
+        author = #{author}
+    </select>
+    <select id="searchAllByBookName" resultType="book">
+        select
+        *
+        from bookinfo
+        where
+        bookName = #{bookName}
+    </select>
+    <select id="searchByISBN" resultType="book">
+        select
+        *
+        from bookinfo
+        where
+        ISBN = #{ISBN}
+    </select>
+    <delete id="delByISBN">
+        delete
+        from bookinfo
+        where
+        ISBN = #{ISBN}
+    </delete>
+
+</mapper>
