@@ -3,8 +3,8 @@
 
 #### 基于Spring+Spring MVC(Maven方式构建)
 
-[![Build Status](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202211012228722.svg)](https://travis-ci.org/withstars/Books-Management-System)
-[![Fdick.pm](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202211012227736.svg)](![fdick](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202211012236763.svg))
+[![Build Status](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202211012228722.svg)](https://github.com/Fdikc/Experment_fdick)
+[![Fdick.pm](https://fdick-1312693144.cos.ap-beijing.myqcloud.com/Fdick/img/202211012227736.svg)](![fdick](https://github.com/Fdikc/Experment_fdick)
 
 ### 项目简介
 
