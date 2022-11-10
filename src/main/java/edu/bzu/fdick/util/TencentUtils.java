@@ -21,12 +21,12 @@ public class TencentUtils {
     private static final Logger logger = LoggerFactory.getLogger(TencentUtils.class);
 
     // 此处填写的存储桶名称(同一腾讯云内，不同存储桶名称不同，其余配置相同)
-    private static final String bucketName = "fdick-1312693144";
+    private static final String bucketName = "";
 
     // secretId
-    private static final String secretId = "AKIDx460mSwDHG6pLbmvoSdt12tb8Thv67tU";
+    private static final String secretId = "";
     // secretKey
-    private static final String secretKey = "TikbGk495rSr7NblncGjz4BRefU3YCh2";
+    private static final String secretKey = "";
 
     // 1 初始化用户身份信息(secretId, secretKey，可在腾讯云后台中的API密钥管理中查看！
     private static COSCredentials cred = new BasicCOSCredentials(secretId, secretKey);
