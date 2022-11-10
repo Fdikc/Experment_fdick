@@ -46,6 +46,15 @@
 
         </table>
     </c:if>
+
+<%--    购物车总金额--%>
+    <c:if test="${!empty total}">
+        <h3>总金额：${total}</h3>
+    </c:if>
+
+    <c:if test="${!empty cart}">
+        <a href="buyCar.jsp" class="btn btn-primary">结算</a>
+    </c:if>
     <a href="book?opera=findAll">返回书籍列表</a>
 </div>
 

@@ -23,12 +23,24 @@
 <a class="btn btn-primary" href="${pageContext.request.contextPath}/admin/addbook_admin.jsp">添加</a>
 <table class="table table-hover">
     <tr>
-        <th>ISBN</th>
-        <th>书名</th>
-        <th>单价</th>
-        <th>作者</th>
-        <th>出版社</th>
-        <th>操作</th>
+        <th>
+            <fmt:message key="B_ISBN"/>
+        </th>
+        <th>
+            <fmt:message key="B_BookName"/>
+        </th>
+        <th>
+            <fmt:message key="B_Price"/>
+        </th>
+        <th>
+            <fmt:message key="B_Author"/>
+        </th>
+        <th>
+            <fmt:message key="B_press"/>
+        </th>
+        <th>
+            <fmt:message key="B_Operator"/>
+        </th>
     </tr>
     <c:forEach items="${books}" var="book">
         <tr onclick="location.href='book?opera=detial&&id=${book.ISBN}';">

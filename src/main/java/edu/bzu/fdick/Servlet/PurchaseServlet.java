@@ -21,7 +21,16 @@ public class PurchaseServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=utf-8");
+        double total;
+
         HttpSession session = req.getSession();
+        if (session.getAttribute("total")==null){
+            total=0.0;
+        }
+        else{
+            total=(double)session.getAttribute("total");
+        }
+
         String id = req.getParameter("id");
         System.out.println(id);
         BookService bookService = new BookService();
@@ -32,6 +41,9 @@ public class PurchaseServlet extends HttpServlet {
             resp.sendRedirect(contextPath+"/book?opera=findAll");
             return;
         }
+        double i = Double.parseDouble(book.getPrice().toString());
+        total+=i;
+        session.setAttribute("total",total);
         System.out.println(book);
         HashMap cart = (HashMap) session.getAttribute("cart");
         if (cart == null) {

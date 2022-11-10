@@ -5,7 +5,7 @@
 <configuration>
     <properties resource="druid.properties"></properties>
     <settings>
-        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="mapUnderscoreToCamelCase" value="false"/>
         <!--全局缓存：开启-->
         <setting name="cacheEnabled" value="true"/>
     </settings>

@@ -65,9 +65,9 @@ public class UserServlet extends HttpServlet {
         System.out.println(name + " " + password);
         User user = new User(0,name,password,null,0,null);
         UserService userService = new UserService();
-        boolean f = userService.login(user);
-        if (f) {
-            session.setAttribute("user",user);
+        User f = userService.login(user);
+        if (f!=null) {
+            session.setAttribute("user",f);
             resp.sendRedirect(contextPath+"/book?opera=findAll");
         } else {
             req.getRequestDispatcher("/login.jsp").forward(req, resp);

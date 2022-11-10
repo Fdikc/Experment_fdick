@@ -1,12 +1,8 @@
 package edu.bzu.fdick;
-
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import edu.bzu.fdick.entity.Book;
-import edu.bzu.fdick.entity.User;
 import edu.bzu.fdick.mapper.BookMapper;
-import edu.bzu.fdick.mapper.UserMapper;
 import edu.bzu.fdick.service.BookService;
 import edu.bzu.fdick.util.SqlSessionUtil;
 import org.apache.ibatis.session.SqlSession;
@@ -16,8 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestBook {
-
-
 
     @org.junit.Test
     public  void test1() throws IOException {
@@ -33,7 +27,7 @@ public class TestBook {
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         BookMapper bookMapper = sqlSession.getMapper(BookMapper.class);
         Book book = new Book();
-        book.setISBN("520520");
+        book.setISBN("5201111520");
         book.setBookName("book123");
         book.setAuthor("hhhh");
         book.setCategoryID(1);

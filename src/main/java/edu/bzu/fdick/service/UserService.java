@@ -26,15 +26,13 @@ public class UserService {
         }
         return flag;
     }
-    public boolean login(User user){
-        boolean flag = false;
+    public User login(User user){
+
         SqlSession sqlSession = SqlSessionUtil.getSqlSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
         User u1 = userMapper.searchByUserNameAndUserPass(user.getUserName(), user.getUserPass());
         System.out.println(u1);
-        if (u1!=null){
-            flag = true;
-        }
-        return flag;
+
+        return u1;
     }
 }
