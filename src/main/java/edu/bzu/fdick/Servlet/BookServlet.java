@@ -67,7 +67,7 @@ public class BookServlet extends HttpServlet {
 
         System.out.println(user.getUserName()+user.getUserPass());
         //List<Book> books = bookService.findAll();
-        List<Book> books = bookService.pageHelper(page, 5).getList();
+        List<Book> books = bookService.pageHelper(page, 10).getList();
         System.out.println(books+"1111book111");
 
         if (user.getUserName().equals("fu")&&user.getUserPass().equals("123")){

@@ -18,6 +18,7 @@
         <!-- 强转成一个用户，拿到用户名字 -->
        <h3><p>尊贵的管理员${user.userName}</p></h3>
         <a href="${pageContext.request.contextPath}/carServlet">购物车</a>
+        <a href="${pageContext.request.contextPath}/orderAServlet">订单管理</a>
     </div>
 </div>
 <a class="btn btn-primary" href="${pageContext.request.contextPath}/admin/addbook_admin.jsp">添加</a>

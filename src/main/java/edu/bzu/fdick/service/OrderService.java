@@ -1,6 +1,8 @@
 package edu.bzu.fdick.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import edu.bzu.fdick.entity.Order;
+import edu.bzu.fdick.entity.User;
 import edu.bzu.fdick.mapper.BookMapper;
 import edu.bzu.fdick.mapper.OrderMapper;
 import edu.bzu.fdick.util.SqlSessionUtil;
@@ -25,5 +27,15 @@ public class OrderService {
         int insert = orderMapper.insert(order);
 //        sqlSession.commit();
         return insert>0;
+    }
+
+    public boolean del(String id){
+        int i = orderMapper.deleteById(id);
+        return i>0;
+    }
+
+    public Order serchone(String id){
+        Order order = orderMapper.searchById(id);
+        return order;
     }
 }

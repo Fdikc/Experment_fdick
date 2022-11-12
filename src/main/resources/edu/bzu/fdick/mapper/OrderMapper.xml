@@ -11,6 +11,13 @@
     <select id="selectAll"  resultType="order">
         select * from orderinfo
     </select>
+    <select id="searchById" resultType="order">
+        select
+        *
+        from orderinfo
+        where id
+        = #{id}
+    </select>
 
 
 </mapper>

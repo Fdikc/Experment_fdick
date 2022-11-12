@@ -1,13 +1,18 @@
-package edu.bzu.fdick.service;
+package edu.bzu.fdick.Servlet;
 
+import edu.bzu.fdick.entity.Book;
 import edu.bzu.fdick.entity.Order;
+import edu.bzu.fdick.entity.OrderAndISBN;
 import edu.bzu.fdick.entity.User;
+import edu.bzu.fdick.service.OrderAndISBNService;
+import edu.bzu.fdick.service.OrderService;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.UUID;
 
 @WebServlet("/orderServlet")
@@ -52,8 +57,29 @@ public class OrderServlet extends HttpServlet {
         order.setReceivername(receivername);
         order.setReceiverphone(receiverphone);
         order.setOrdertime(date);
-
         boolean b = new OrderService().addOrder(order);
+        boolean b1=false;
+        HashMap cart = (HashMap) session.getAttribute("cart");
+        for (Object key:cart.keySet()){
+            System.out.println(key+"  and  ");
+            String s = key.toString();
+            OrderAndISBN orderAndISBN = new OrderAndISBN(orderid, s, 1);
+           b1 = new OrderAndISBNService().addOrdeAndISBN(orderAndISBN);
+        }
+        if (b&&b1){
+            session.removeAttribute("total");
+            cart.clear();
+            String contextPath = req.getContextPath();
+            resp.sendRedirect(contextPath+"/book?opera=findAll");
+        }
+
+
+//        OrderAndISBN o = new OrderAndISBN(orderid, "520520", 1);
+//        boolean b1 = new OrderAndISBNService().addOrdeAndISBN(o);
+
+
+
+
         System.out.println(b);
 
 
